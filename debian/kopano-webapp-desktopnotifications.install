@@ -1,0 +1,8 @@
+#!/usr/bin/dh-exec
+# source                                    # target
+config.php                  => etc/kopano/webapp/config-desktopnotifications.php
+
+build/js                       usr/share/kopano-webapp/plugins/desktopnotifications
+build/language                 usr/share/kopano-webapp/plugins/desktopnotifications
+php                            usr/share/kopano-webapp/plugins/desktopnotifications
+resources                      usr/share/kopano-webapp/plugins/desktopnotifications

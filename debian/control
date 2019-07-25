@@ -1,0 +1,25 @@
+Source: kopano-webapp-plugin-desktopnotifications
+Section: web
+Priority: optional
+Maintainer: Giraffe Maintainers <pkg-giraffe-maintainers@lists.alioth.debian.org>
+Uploaders: Roel van Meer <roel@1afa.com>
+Build-Depends: 
+ closure-compiler,
+ debhelper-compat (= 12),
+ dh-exec,
+ gettext,
+ php-cli,
+Vcs-Git: https://salsa.debian.org/giraffe-team/kopano-webapp-plugin-desktopnotifications.git
+Vcs-Browser: https://salsa.debian.org/giraffe-team/kopano-webapp-plugin-desktopnotifications
+Standards-Version: 4.4.0
+
+Package: kopano-webapp-desktopnotifications
+Architecture: all
+Depends:
+ kopano-webapp-common (>= 3.3.1-1~),
+ ${misc:Depends},
+Description: Kopano WebApp desktopnotifications plugin
+ This package is a plugin for kopano-webapp, a web interface for the Kopano
+ Collaboration Platform.
+ .
+ This plugin shows notifications of new emails and reminders on the desktop.

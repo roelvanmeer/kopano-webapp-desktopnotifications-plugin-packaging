@@ -1,0 +1,2 @@
+# source                                            # target
+/etc/kopano/webapp/config-desktopnotifications.php  usr/share/kopano-webapp/plugins/desktopnotifications/config.php

@@ -1,0 +1,45 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+# export DH_VERBOSE=1
+
+JS_FILES := \
+    js/ABOUT.js \
+    js/DesktopNotifications.js \
+    js/DesktopNotificationsPlugin.js \
+    js/DesktopNotifier.js \
+    js/settings/SettingsNotificationsCategory.js \
+    js/settings/SettingsNotificationsWidget.js \
+    $(NULL)
+
+CLOSURE_OPTIONS := \
+    --js desktopnotifications-debug.js \
+    --js_output_file desktopnotifications.js \
+    --source_map_format=V3 \
+    --create_source_map desktopnotifications.js.map \
+    $(NULL)
+
+LOCALE_LANG_DIR = $(shell find language/ -type d -name "LC_MESSAGES" | sed -e "s/\.\///" | sort)
+
+%:
+	dh $@ 
+
+override_dh_auto_clean:
+	rm -rf build
+	dh_clean -Xbuild.xml
+
+override_dh_auto_build:
+	mkdir -p build/js
+	cat $(JS_FILES) > build/js/desktopnotifications-debug.js
+	cd build/js && closure-compiler $(CLOSURE_OPTIONS)
+	@echo "Create *.mo files..."
+	@for LANG_DIR in $(LOCALE_LANG_DIR); do \
+		echo $${LANG_DIR}; \
+		mkdir -p build/$${LANG_DIR}; \
+		msgfmt -v -o build/$${LANG_DIR}/plugin_desktopnotifications.mo $${LANG_DIR}/plugin_desktopnotifications.po; \
+		find build/language/ -type d -empty -delete; \
+	done
+
+override_dh_install:
+	dh_install

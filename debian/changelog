@@ -1,0 +1,5 @@
+kopano-webapp-plugin-desktopnotifications (2.0.2-1) experimental; urgency=medium
+
+  * Initial release. (Closes: #931882)
+
+ -- Roel van Meer <roel@1afa.com>  Fri, 12 Jul 2019 20:22:06 +0200
