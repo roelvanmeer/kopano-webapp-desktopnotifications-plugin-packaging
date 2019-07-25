@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-05 16:04+0100\n"
+"PO-Revision-Date: 2018-07-10 14:03+0000\n"
+"Last-Translator: Nuno Jerónimo <nuno.jeronimo@valsousa.pt>\n"
+"Language-Team: Portuguese (Portugal) <http://translate.kopano.io/projects/"
+"kopano/desktopnotifications/pt_PT/>\n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.4\n"
+
+#: js/DesktopNotificationsPlugin.js:41
+msgid "Desktop Notifications Plugin"
+msgstr "Plugin Notificações Ambiente de Trabalho"
+
+#: js/settings/SettingsNotificationsCategory.js:20
+msgid "Desktop Notifications"
+msgstr "Notificações Ambiente de Trabalho"
+
+#: js/settings/SettingsNotificationsWidget.js:35
+msgid "Desktop Notifications Settings"
+msgstr "Definições Notificações Ambiente de Trabalho"
+
+#: js/settings/SettingsNotificationsWidget.js:60
+msgid "We need permissions to enable desktop notifications."
+msgstr ""
+
+#: js/settings/SettingsNotificationsWidget.js:64
+msgid "Request Permissions"
+msgstr "Pedir Permissões"
+
+#: js/settings/SettingsNotificationsWidget.js:72
+msgid "Enable desktop notifications for new mail"
+msgstr "Ativar notificações no ambiente de trabalho para mensagens novas"
+
+#: js/settings/SettingsNotificationsWidget.js:80
+msgid "Enable desktop notifications for reminders"
+msgstr "Ativar notificações no ambiente de trabalho para lembretes"
+
+#: js/settings/SettingsNotificationsWidget.js:89
+msgid "{A} Autohide desktop notification after second(s) {B}"
+msgstr ""
+"{A} Esconder as notificações do ambiente de trabalho após {B} segundo(s)"
